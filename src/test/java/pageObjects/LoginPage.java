@@ -36,9 +36,9 @@ public  WebDriver driver;
         Loginsubmit.click();
     }
 
-    public void verifyTitleofPage(String Title){
-       Title = driver.getTitle();
-    }
+//    public void verifyTitleofPage(String Title){
+//       Title = driver.getTitle();
+//    }
 
     public void clickonLogout(){
         Logout.click();

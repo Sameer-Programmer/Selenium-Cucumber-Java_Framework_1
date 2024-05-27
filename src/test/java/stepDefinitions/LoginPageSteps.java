@@ -14,8 +14,9 @@ public class LoginPageSteps {
 
     @Given("Launch the Chrome Browser")
     public void launch_the_chrome_browser() {
-        loginPage = new LoginPage(driver);
         driver = new ChromeDriver();
+        loginPage = new LoginPage(driver);
+
     }
 
     @When("Enter the URL {string}")
@@ -30,7 +31,7 @@ public class LoginPageSteps {
 
     @Then("Page Title Should be {string}")
     public void page_title_should_be(String Title) {
-        Assert.assertTrue(Title, Boolean.parseBoolean(driver.getTitle()));
+        Assert.assertEquals(Title,driver.getTitle());
     }
 
     @Then("Logout")
