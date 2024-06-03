@@ -43,7 +43,4 @@ public  WebDriver driver;
     public void clickonLogout(){
         Logout.click();
     }
-
-
-
 }
