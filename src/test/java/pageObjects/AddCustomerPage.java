@@ -6,9 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class AddCustomerPage {
-
     public WebDriver driver;
-
     public  AddCustomerPage(WebDriver driver ){
         this.driver = driver;
         PageFactory.initElements(driver , this);
@@ -19,16 +17,22 @@ public class AddCustomerPage {
 
     @FindBy(xpath = "//a[@href='/Admin/Customer/List']//p[contains(text(),'Customers')]")
     WebElement Customers_subtab;
-
-
     @FindBy(css = "a[class='btn btn-primary']")
     WebElement Addnewbutton;
-
     @FindBy(xpath = " //input[@id='SearchEmail']")
     WebElement Email;
-
     @FindBy(xpath = "//input[@id='SearchFirstName']")
     WebElement Firstname;
+
+    @FindBy(xpath = "//input[@id='SearchLastName']")
+    WebElement Lastname;
+
+    @FindBy(xpath = "//select[@id='SearchMonthOfBirth']")
+    WebElement Month;
+
+
+
+
 
 
 
